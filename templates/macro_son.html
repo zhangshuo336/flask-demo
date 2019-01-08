@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>macro_son</title>
+</head>
+<body>
+<!--外部宏导入-->
+{%import "macro.html" as func%}
+<!--外部宏使用-->
+{{func.input('zhang')}}
+
+<!--内部宏定义-->
+{% macro in(type) %}
+<input type="{{ type }}">
+{%endmacro%}
+<!--内部宏使用-->
+{{in("text")}}
+</body>
+</html>

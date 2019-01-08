@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>register</title>
+    <style>
+        .ww{width:300px;}
+    </style>
+</head>
+<body>
+<form action="/registers" method="post">
+    {{form.csrf_token}}
+    <ul>
+        <li>{{form.username.label}}{{form.username}}</li>
+        {%for msg in form.username.errors%}
+        <li><P>{{msg}}</P></li>
+        {%endfor%}
+        <li>{{form.password.label}}{{form.password}}</li>
+        {%for msg in form.password.errors%}
+        <li><P>{{msg}}</P>/li>
+        {%endfor%}
+        <li>{{form.password2.label}}{{form.password2}}</li>
+        {%for msg in form.password2.errors%}
+        <li><P>{{msg}}</P></li>
+        {%endfor%}
+        <li>{{form.submit}}</li>
+    </ul>
+</form>
+</body>
+</html>

@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>index</title>
+    <title>flash</title>
 </head>
 <body>
-<a href="/lian">链接</a>
-{{name}}
+{%for msg in get_flashed_messages()%}
+<p>{{msg}}</p>
+{%endfor%}
 </body>
 </html>
