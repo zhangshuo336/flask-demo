@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sql</title>
+</head>
+<body>
+<!--数据查询测试页-->
+{{user.name}}{{user.password}}
+<div>user2:{{user2.name}},{{user2.password}}</div>
+<div>userall:{%for msg in userall%}
+{{msg.name}}
+    {%endfor%}
+</div>
+<div>{{user3.name}}</div>
+<div>{%for i in user4%}
+{{i.name}}
+    {%endfor%}
+</div>
+<div>{%for i in user5%}
+    <p>haha:{{i.name}}</p>
+    {%endfor%}
+</div>
+<div>{{listss}}</div>
+</body>
+</html>
